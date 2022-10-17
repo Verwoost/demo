@@ -1,0 +1,128 @@
+*, *::after, *::before {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.animate {
+  position: relative;
+  left: -100px;
+  opacity: 0;
+}
+
+.header_links {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header_link {
+  margin: 0 1rem;
+  padding: 0.25rem;
+  color: #ababac;
+  font-weight: bold;
+}
+
+.hero {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-image: url("./assets/webdev.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 600px) {
+  .hero {
+    background-image: none;
+    background-color: darkslategray;
+    height: 50vh;
+  }
+}
+
+.hero_text-items {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  padding: 1rem;
+}
+.hero_text-items h2 {
+  padding: 0.5rem 0;
+}
+.hero_text-items p {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 600px) {
+  .hero_text-items {
+    background-color: transparent;
+    width: 100%;
+  }
+  .hero_text-items p {
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 786px) {
+  .hero_text-items {
+    width: 80%;
+  }
+  .hero_text-items p {
+    padding: 0 1rem;
+  }
+}
+
+section {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article_wrapper {
+  display: flex;
+}
+@media screen and (max-width: 600px) {
+  .article_wrapper {
+    flex-direction: column;
+  }
+}
+article {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  article {
+    width: 100%;
+  }
+}
+
+.header_space {
+  background-color: #3e3e3e;
+}
+
+.logo {
+  flex: 1;
+  margin-left: 2rem;
+  width: 4rem;
+  height: 4rem;
+}/*# sourceMappingURL=styles.css.map */
