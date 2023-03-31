@@ -15,8 +15,10 @@ header{
   }
 
   .animate{
-    position: relative;
-    left: -100px;
+    opacity: 0;
+  }
+
+  .animatem{
     opacity: 0;
   }
   
@@ -81,6 +83,7 @@ header{
         p{
         padding: 0 1rem;
         }
+        
     }
 
     @media screen and (min-width: 599px) and (max-width: 786px) {

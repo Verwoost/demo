@@ -13,8 +13,10 @@ header {
 }
 
 .animate {
-  position: relative;
-  left: -100px;
+  opacity: 0;
+}
+
+.animatem {
   opacity: 0;
 }
 

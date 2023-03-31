@@ -2,7 +2,8 @@ import "./styles.css";
 import logoSpace from "./assets/moon.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useState, useLayoutEffect } from "react";
+import Posts from "./Posts";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,14 +12,16 @@ function App() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // Target the two specific elements we have asigned the animate class
-      gsap.to(".animate", {
+      gsap.to(".animatem", {
         scrollTrigger: {
-          trigger: ".animate",
-          toggleActions: "restart pause reverse pause",
+          trigger: ".animatem",
+          start: "top 60%",
+          end: "top 10%",
+          markers: true,
+          toggleActions: "restart none none none",
         },
-
-        x: 100,
+        left: 0,
+        // xPercent: -40,
         opacity: 1,
         duration: 1,
       });
@@ -29,6 +32,7 @@ function App() {
 
   return (
     <div className="App" ref={app}>
+      <Posts></Posts>
       <div className="section_space">
         <header className="header_space">
           <img src={logoSpace} className="logo"></img>
@@ -48,7 +52,7 @@ function App() {
           </div>
         </header>
         <div className="hero">
-          <div className="hero_text-items">
+          <div className="hero_text-items animate">
             <h2 className="hero_title">Hello World!</h2>
             <p className="hero_txt">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
@@ -60,7 +64,7 @@ function App() {
           </div>
         </div>
         <div className="hero">
-          <div className="hero_text-items animate">
+          <div className="hero_text-items animatem">
             <h2 className="hero_title">Hello World!</h2>
             <p className="hero_txt">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
@@ -86,7 +90,7 @@ function App() {
           </article>
         </div>
         <div className="hero">
-          <div className="hero_text-items">
+          <div className="hero_text-items animatem">
             <h2 className="hero_title">Hello World!</h2>
             <p className="hero_txt">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
@@ -99,7 +103,7 @@ function App() {
         </div>
         <div className="hero">
           <div className="hero_text-items">
-            <h2 className="hero_title animate">Hello World!</h2>
+            <h2 className="hero_title">Hello World!</h2>
             <p className="hero_txt">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
               aut veniam quasi magnam, excepturi quas minus maiores non
